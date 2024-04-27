@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercise Tracker</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Exercise Tracker</h1>
+
+      <!-- Form for creating a new user -->
+      <form action="/api/users" method="post">
+        <h2>Create a New User</h2>
+        <input id="uname" type="text" name="username" placeholder="username" />
+        <input type="submit" value="Submit" />
+      </form>
+
+      <!-- Form for adding exercises -->
+      <form action="/api/users/:_id/exercises" id="exercise-form" method="post">
+        <h2>Add Exercises</h2>
+        <input id="uid" type="text" name=":_id" placeholder="id" />
+        <input
+          id="desc"
+          type="text"
+          name="description"
+          placeholder="description*"
+        />
+        <input
+          id="dur"
+          type="text"
+          name="duration"
+          placeholder="duration (mins.)"
+        />
+        <input
+          id="date"
+          type="text"
+          name="date"
+          placeholder="date (yyyy-mm-dd)"
+        />
+        <input type="submit" value="Submit" />
+      </form>
+
+      <!-- Simple form for fetching logs -->
+      <form action="/api/users/:_id/logs" id="logs-form" method="get">
+        <h2>Fetch Logs</h2>
+        <input id="uid-logs" type="text" name=":_id" placeholder="id" />
+        <input type="submit" value="Fetch Logs" />
+      </form>
+    </div>
+    <script>
+      // JavaScript code for modifying the action attribute of the exercise-form
+      const exerciseForm = document.getElementById("exercise-form");
+      exerciseForm.addEventListener("submit", () => {
+        const userId = document.getElementById("uid").value;
+        exerciseForm.action = `/api/users/${userId}/exercises`;
+        exerciseForm.submit();
+      });
+
+      // JavaScript code for modifying the action attribute of the logs-form
+      const logsForm = document.getElementById("logs-form");
+      logsForm.addEventListener("submit", () => {
+        const userIdLogs = document.getElementById("uid-logs").value;
+        logsForm.action = `/api/users/${userIdLogs}/logs`;
+        logsForm.submit();
+      });
+    </script>
+  </body>
+</html>
