@@ -132,4 +132,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 Made by Armaan Moledina
 
-Cloud Project for Cloud Computing Course: Semester 5 Computer Engineering
+Project for Cloud Computing Course: Semester 5 Computer Engineering
