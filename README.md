@@ -105,23 +105,7 @@ Essential security configurations included:
    - Allow 48 hours for DNS propagation
    - Verify Route 53 settings
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## Support
-
-- For bugs and features: Open an issue
-- For questions: Start a discussion
-- If you like this project, give it a star!
 
 ## Acknowledgments
 
