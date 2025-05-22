@@ -36,7 +36,6 @@ ssh -i "your-key.pem" ec2-user@your-ec2-instance
 
 Key configurations:
 - AMI: Amazon Linux or Ubuntu
-- Instance Type: Based on requirements (t2.micro for testing)
 - Security Groups: SSH (22), HTTP (80), HTTPS (443)
 
 ### 2. Install MongoDB
@@ -66,7 +65,7 @@ Domain setup steps available in AWS console:
 Essential security configurations included:
 - EC2 security groups
 - MongoDB authentication
-- SSL/TLS setup (optional)
+- SSL/TLS setup for secure protocols 
 - Domain configuration
 
 ## AWS Services Used
